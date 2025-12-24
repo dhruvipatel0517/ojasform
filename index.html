@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Job Application System - Government of Gujarat</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <img src="satyamev.png" alt="Government Logo" class="logo">
+                <div class="header-text">
+                    <h1>ONLINE JOB APPLICATION SYSTEM</h1>
+                    <p>Government of Gujarat</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="assets/ojas-logo.png" alt="OJAS Logo" class="ojas-logo">
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#registration">Registration+</a></li>
+                <li><a href="#online-application">Online Application+</a></li>
+                <li><a href="#upload">Upload+</a></li>
+                <li><a href="#fees">Fees+</a></li>
+                <li><a href="#call-letter">Call Letter / Preference+</a></li>
+                <li><a href="#other-application">Other Application+</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Form -->
+        <main class="form-container">
+            <h2>Registration</h2>
+
+            <!-- Note Section -->
+            <div class="note">
+                <strong>Note:</strong>
+                <ul>
+                    <li>Special Characters not allowed <>&lt; (] &lt; +, '=' etc.</li>
+                    <li>* indicates mandatory field</li>
+                </ul>
+            </div>
+
+            <form id="applicationForm">
+                <!-- Personal Details Section -->
+                <section class="form-section">
+                    <h3>Personal Details (વ્યક્તિગત વિગતો)</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <select id="title" name="title">
+                                <option value="">Select</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Ms">Ms</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Surname <span class="required">*</span></label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fatherName">Father/Husband Name</label>
+                            <input type="text" id="fatherName" name="fatherName">
+                        </div>
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name <span class="required">*</span></label>
+                            <input type="text" id="motherName" name="motherName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">Gender <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                                <label><input type="radio" name="gender" value="Female"> Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="declaredGender">Declared Gender <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="declaredGender" value="Male" required> Male</label>
+                                <label><input type="radio" name="declaredGender" value="Female"> Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth <span class="required">*</span></label>
+                            <input type="text" id="dob" name="dob" placeholder="(dd/mm/yyyy)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="maritalStatus">Marital Status <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="maritalStatus" value="Married" required> Married</label>
+                                <label><input type="radio" name="maritalStatus" value="Unmarried"> Unmarried</label>
+                                <label><input type="radio" name="maritalStatus" value="Separated"> Separated</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category <span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Select</option>
+                                <option value="General">General</option>
+                                <option value="OBC">OBC</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Communication Details Section -->
+                <section class="form-section">
+                    <h3>Communication Details (સંપર્ક વિગતો)</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="presentAddress">Present Address <span class="required">*</span></label>
+                            <textarea id="presentAddress" name="presentAddress" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="permanentAddress">Permanent Address <span class="required">*</span></label>
+                            <textarea id="permanentAddress" name="permanentAddress" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="presentState">State <span class="required">*</span></label>
+                            <select id="presentState" name="presentState" required>
+                                <option value="GUJARAT">GUJARAT</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="permanentState">State <span class="required">*</span></label>
+                            <select id="permanentState" name="permanentState" required>
+                                <option value="GUJARAT">GUJARAT</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="presentDistrict">District <span class="required">*</span></label>
+                            <select id="presentDistrict" name="presentDistrict" required>
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="permanentDistrict">District <span class="required">*</span></label>
+                            <select id="permanentDistrict" name="permanentDistrict" required>
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="presentTaluka">Taluka <span class="required">*</span></label>
+                            <select id="presentTaluka" name="presentTaluka" required>
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="permanentTaluka">Taluka <span class="required">*</span></label>
+                            <select id="permanentTaluka" name="permanentTaluka" required>
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="presentPinCode">PIN Code <span class="required">*</span></label>
+                            <input type="text" id="presentPinCode" name="presentPinCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="permanentPinCode">Pin Code <span class="required">*</span></label>
+                            <input type="text" id="permanentPinCode" name="permanentPinCode" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mobileNo">Mobile No <span class="required">*</span></label>
+                            <input type="tel" id="mobileNo" name="mobileNo" required>
+                            <p class="warning">SMS Alert (Verify in OTP Will be Sent to Verify Mobile No)</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <p class="warning">Registration Details Will be Sent to E-MAIL</p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reTypeMobileNo">Re-Type Mobile No <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="reTypeMobileNo" value="Indian" required> Indian</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reTypeEmail">Re-Type Email <span class="required">*</span></label>
+                            <input type="email" id="reTypeEmail" name="reTypeEmail" required>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Other Details Section -->
+                <section class="form-section">
+                    <h3>Other Details (અન્ય વિગતો)</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Is Job Holder Holds Driving License (હજર જોબ હોલ્ડર ડ્રાઇવિંગ લાયસેન્સ ધરાવે છે) <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="drivingLicense" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="drivingLicense" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameOfSports">Name of Sports</label>
+                            <select id="nameOfSports" name="nameOfSports">
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sportLevel">Sport Level(राष्ट्र, राज्य, जिला)</label>
+                            <select id="sportLevel" name="sportLevel">
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Physically Challenged (As Per Published Advertisement Percentage)</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="physicallyChallenged" value="Blindness"> Blindness</label>
+                                <label><input type="checkbox" name="physicallyChallenged" value="Low Vision"> Low Vision</label>
+                                <label><input type="checkbox" name="physicallyChallenged" value="Deaf & Dumb"> Deaf & Dumb</label>
+                                <label><input type="checkbox" name="physicallyChallenged" value="Hearing Handicap"> Hearing Handicap</label>
+                                <label><input type="checkbox" name="physicallyChallenged" value="Not Applicable"> Not Applicable</label>
+                                <label><input type="checkbox" name="physicallyChallenged" value="Orthopedics"> Orthopedics (OA, OL, BL, OAL)</label>
+                                <label><input type="checkbox" name="physicallyChallenged" value="Other"> Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Widows (महिला)</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="widows" value="Yes"> Yes</label>
+                                <label><input type="radio" name="widows" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="widowCertNo">Widow Certificate No.</label>
+                            <input type="text" id="widowCertNo" name="widowCertNo">
+                        </div>
+                        <div class="form-group">
+                            <label for="widowCertDate">Widow Certificate Date</label>
+                            <input type="text" id="widowCertDate" name="widowCertDate" placeholder="(dd/mm/yyyy)">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ex-Soldier (Army / Navy / Air Force)</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="exSoldier" value="Yes"> Yes</label>
+                                <label><input type="radio" name="exSoldier" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fromDate">From Date</label>
+                            <input type="text" id="fromDate" name="fromDate" placeholder="(dd/mm/yyyy)">
+                        </div>
+                        <div class="form-group">
+                            <label for="toDate">To Date</label>
+                            <input type="text" id="toDate" name="toDate" placeholder="(dd/mm/yyyy)">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="govServiceDate">Government Service Date</label>
+                            <input type="text" id="govServiceDate" name="govServiceDate" placeholder="(dd/mm/yyyy)">
+                        </div>
+                        <div class="form-group">
+                            <label for="departmentName">Name of Department/Service (नाम)</label>
+                            <input type="text" id="departmentName" name="departmentName">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Currently working as Gujarat State Government</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="currentlyWorking" value="Yes"> Yes</label>
+                                <label><input type="radio" name="currentlyWorking" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="joiningDate">Joining Date in Government Service</label>
+                            <input type="text" id="joiningDate" name="joiningDate" placeholder="(dd/mm/yyyy)">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Language Details Section -->
+                <section class="form-section">
+                    <h3>Language Details (ભાષાકીય વિગતો)</h3>
+                    
+                    <table class="language-table">
+                        <thead>
+                            <tr>
+                                <th>Language Proficiency</th>
+                                <th>Language</th>
+                                <th>Read</th>
+                                <th>Write</th>
+                                <th>Speak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <select name="language1">
+                                        <option value="">Select</option>
+                                        <option value="English">English</option>
+                                        <option value="Gujarati">Gujarati</option>
+                                        <option value="Hindi">Hindi</option>
+                                    </select>
+                                </td>
+                                <td><input type="checkbox" name="read1"></td>
+                                <td><input type="checkbox" name="write1"></td>
+                                <td><input type="checkbox" name="speak1"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <select name="language2">
+                                        <option value="">Select</option>
+                                        <option value="English">English</option>
+                                        <option value="Gujarati">Gujarati</option>
+                                        <option value="Hindi">Hindi</option>
+                                    </select>
+                                </td>
+                                <td><input type="checkbox" name="read2"></td>
+                                <td><input type="checkbox" name="write2"></td>
+                                <td><input type="checkbox" name="speak2"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <select name="language3">
+                                        <option value="">Select</option>
+                                        <option value="English">English</option>
+                                        <option value="Gujarati">Gujarati</option>
+                                        <option value="Hindi">Hindi</option>
+                                    </select>
+                                </td>
+                                <td><input type="checkbox" name="read3"></td>
+                                <td><input type="checkbox" name="write3"></td>
+                                <td><input type="checkbox" name="speak3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Photo Upload Section -->
+                <section class="form-section">
+                    <h3>Upload Photograph (ફોટોગ્રાફ અપલોડ કરો)</h3>
+                    <p class="note">Note: Quality of Photograph should be Good Enough to Be Identifiable and Acceptable.<br/>
+                    નોટ : ફોટોગ્રાફ ની ગુણવત્તા સારી હોવી જોઈએ અને તેને ઓળખી શકાય તેવી હોવી જોઈએ ।</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="photoUpload">Choose File: No file chosen</label>
+                            <input type="file" id="photoUpload" name="photoUpload" accept="image/*">
+                        </div>
+                        <button type="button" class="btn-upload" onclick="document.getElementById('photoUpload').click()">Upload</button>
+                    </div>
+
+                    <p class="file-info">ફોટોગ્રાફ: ૫ કે.બી. થી ૧૫ કે.બી. વચ્ચે Photo of Size 15 KB ની વચ્ચે રહી.</p>
+                </section>
+
+                <!-- Signature Upload Section -->
+                <section class="form-section">
+                    <h3>Upload Signature(પાક્ષણ અપલોડ કરો)</h3>
+                    <p class="note">Note : Please Sign on White Paper with Dark Pen and Scan it in JPG Format.<br/>
+                    નોટ : કૃપા કરીને સફેદ કાગળ પર કાળો પેન વડે હસ્તાક્ષર કરો અને તેને JPG ફોર્મેટમાં સ્કેન કરો.</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signatureUpload">Choose File: No file chosen</label>
+                            <input type="file" id="signatureUpload" name="signatureUpload" accept="image/*">
+                        </div>
+                        <button type="button" class="btn-upload" onclick="document.getElementById('signatureUpload').click()">Upload</button>
+                    </div>
+
+                    <p class="file-info">હસ્તાક્ષર: ૨ કે.બી. થી ૧૫ કે.બી. વચ્ચે Signature of Size 15 KB ની વચ્ચે રહી.</p>
+                </section>
+
+                <!-- Declaration Section -->
+                <section class="form-section">
+                    <h3>Declaration</h3>
+                    
+                    <div class="declaration-text">
+                        <p>
+                            હું આ પ્રમાણે ઘોષણા કરું છું અને ૧ વધે જણાવું છું કે આ અર્જમાં આપેલી બધી માહિતી સત્ય છે। જો આ અર્જમાં આપેલી કોઈ માહિતી જૂઠી, ખોટી અથવા મિથ્યા હોય તો મારી વિરુદ્ધ કાયદેસર કાર્યવાહી કરવામાં આવશે। મે આ એક વાર રજિસ્ટ્રેશન કર્યું છે અને ફરીથી રજિસ્ટ્રેશન કરવા માટે પણ સમર્થ નથી .ONE TIME REGISTRATION ના લાભ રૂપ OJAS iii Online ભરવાથી જ પણ માત્ર એક જ વર્તમાન આવશે. આમ, ONE TIME REGISTRATION ની ડીટેલીમાં OJAS iii Online આવીને કરવાત કર્યું એક જ કર્તવ્ય આવશે. બીજી REGISTRATION કહેવા સાથે આ આવશે તે પણ જતી રહેશે તથા તે ખોટુ REGISTRATION ક્રમાંકોને તક આપશે અને પછી પણ OJAS અને OTR એ યોગ્ય મુલતવી કરશે.
+                        </p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="declaration" id="declaration" required>
+                                Yes / No
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Captcha Section -->
+                <section class="form-section">
+                    <h3>Captcha</h3>
+                    <div class="captcha-box">
+                        <span id="captcha-text">SPR78</span>
+                    </div>
+                </section>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Submit</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
